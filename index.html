@@ -1,0 +1,84 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="stylesheets.css" />
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Learn more about Muve, its team, value and our culture and how we're changing the way shipping is performed.">
+
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+
+  <!-- Start of Async Drift Code -->
+  <script>
+    ! function() {
+      var t;
+      if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void(window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0,
+        t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
+        t.factory = function(e) {
+          return function() {
+            var n;
+            return n = Array.prototype.slice.call(arguments), n.unshift(e), t.push(n), t;
+          };
+        }, t.methods.forEach(function(e) {
+          t[e] = t.factory(e);
+        }), t.load = function(t) {
+          var e, n, o, i;
+          e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"),
+            o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js",
+            n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
+        });
+    }();
+    drift.SNIPPET_VERSION = '0.3.1';
+    drift.load('px6hbg4x3yfg');
+  </script>
+  <!-- End of Async Drift Code -->
+
+  <!-- <script>
+      $(function() {
+        $('#dpt').fdatepicker({
+          format: 'mm-dd-yyyy hh:ii',
+          disableDblClickSelection: true,
+          language: 'en',
+          pickTime: true
+        });
+      });
+    </script> -->
+</head>
+
+<body>
+
+  <nav>
+    <img src="muve.png" />
+    <h5>YOUR ON-DEMAND MOVER</h5>
+  </nav>
+
+  <h3>Pickup Location</h3>
+  <hr style="width:50px;" />
+  <input id="address1" type="text" size="50" placeholder="Pickup Address">
+  <input id="address2" type="text" size="50" placeholder="Dropoff Address">
+
+  <h3>Name & Phone</h3>
+  <hr style="width:50px;" />
+  <input id="name" type="text" size="50" placeholder="Full Name" />
+  <input id="phone" type="text" size="50" placeholder="Phone" />
+
+  <h3>Pickup Date & Time</h3>
+  <hr style="width:50px;" />
+  <input type="text" class="span2" value="02-12-1989 12:05" id="dpt">
+
+  <p>
+    *You agree that Muve will pickup and deliver your items as quickly and safely as possible, as well as supply a dolly and furniture pads. I acknowledge that Muve does not cover and will not move pianos, organs, gun safes, pool tables, china cabinets, antiques,
+    exercise equipment, hot tubes or anything irreplaceable, highly valuable, extremely heavy or potentially dangerous.
+  </p>
+
+  <button>SUBMIT</button>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
