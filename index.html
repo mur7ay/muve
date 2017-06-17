@@ -5,6 +5,7 @@
 <head>
   <title></title>
   <link rel="stylesheet" type="text/css" href="stylesheets.css" />
+  <link rel="stylesheet" type="text/css" href="css/foundation-datepicker.css" />
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +13,7 @@
   <meta name="description" content="Learn more about Muve, its team, value and our culture and how we're changing the way shipping is performed.">
 
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
   <!-- Start of Async Drift Code -->
   <script>
@@ -38,7 +40,7 @@
   </script>
   <!-- End of Async Drift Code -->
 
-  <!-- <script>
+  <script>
       $(function() {
         $('#dpt').fdatepicker({
           format: 'mm-dd-yyyy hh:ii',
@@ -47,7 +49,7 @@
           pickTime: true
         });
       });
-    </script> -->
+    </script>
 </head>
 
 <body>
@@ -59,26 +61,29 @@
 
   <h3>Pickup Location</h3>
   <hr style="width:50px;" />
-  <input id="address1" type="text" size="50" placeholder="Pickup Address">
+  <input id="address1" type="text" required="required" size="50" placeholder="Pickup Address">
   <input id="address2" type="text" size="50" placeholder="Dropoff Address">
 
   <h3>Name & Phone</h3>
   <hr style="width:50px;" />
-  <input id="name" type="text" size="50" placeholder="Full Name" />
-  <input id="phone" type="text" size="50" placeholder="Phone" />
+  <input id="name" type="text" size="50" placeholder="Full Name" style="text-transform: capitalize;" />
+  <input id="phone" type="text" size="50" placeholder="Phone" onkeypress="numberPressed(event);" />
 
   <h3>Pickup Date & Time</h3>
   <hr style="width:50px;" />
-  <input type="text" class="span2" value="02-12-1989 12:05" id="dpt">
+  <input type="text" class="span2" value="01-01-2017 12:05" id="dpt">
 
   <p>
     *You agree that Muve will pickup and deliver your items as quickly and safely as possible, as well as supply a dolly and furniture pads. I acknowledge that Muve does not cover and will not move pianos, organs, gun safes, pool tables, china cabinets, antiques,
     exercise equipment, hot tubes or anything irreplaceable, highly valuable, extremely heavy or potentially dangerous.
   </p>
 
-  <button>SUBMIT</button>
+  <button id="submitBtn" type="submit">SUBMIT</button>
 
   <script src="index.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+  <script type="text/javascript" src="js/foundation-datepicker.js"></script>
+
 </body>
 
 </html>
