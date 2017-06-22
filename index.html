@@ -15,6 +15,9 @@
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+  <!-- Google Web Font -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
+
   <!-- Start of Async Drift Code -->
   <script>
     ! function() {
@@ -41,21 +44,21 @@
   <!-- End of Async Drift Code -->
 
   <script>
-      $(function() {
-        $('#dpt').fdatepicker({
-          format: 'mm-dd-yyyy hh:ii',
-          disableDblClickSelection: true,
-          language: 'en',
-          pickTime: true
-        });
+    $(function() {
+      $('#dpt').fdatepicker({
+        format: 'mm-dd-yyyy hh:ii',
+        disableDblClickSelection: true,
+        language: 'en',
+        pickTime: true
       });
-    </script>
+    });
+  </script>
 </head>
 
 <body>
 
   <nav>
-    <img src="muve.png" />
+    <h1>MUVE</h1>
     <h5>YOUR ON-DEMAND MOVER</h5>
   </nav>
 
@@ -73,6 +76,20 @@
   <hr style="width:50px;" />
   <input type="text" class="span2" value="01-01-2017 12:05" id="dpt">
 
+  <h3>Move Details</h3>
+  <hr style="width:50px;" />
+
+  <select class="form-control">
+    <option value="$52" id="items">1 Item</option>
+    <option value="$62.25" id="items">2 Items</option>
+    <option value="$72.75" id="items">3 Items</option>
+    <option value="$83" id="items">4 Item</option>
+  </select>
+
+  <div class="text-center">
+    <h2>Total amount <span id="new_text">$50 USD</span></h2>
+  </div>
+
   <p>
     *You agree that Muve will pickup and deliver your items as quickly and safely as possible, as well as supply a dolly and furniture pads. I acknowledge that Muve does not cover and will not move pianos, organs, gun safes, pool tables, china cabinets, antiques,
     exercise equipment, hot tubes or anything irreplaceable, highly valuable, extremely heavy or potentially dangerous.
@@ -80,6 +97,7 @@
 
   <button id="submitBtn" type="submit">SUBMIT</button>
 
+  <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
   <script src="index.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
   <script type="text/javascript" src="js/foundation-datepicker.js"></script>
