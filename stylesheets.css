@@ -1,6 +1,7 @@
 body {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 100;
+  text-align: center;
 }
 
 img {
@@ -20,39 +21,53 @@ input {
 }
 
 body h3 {
-  text-align: center;
   margin-top: 80px;
   color: #2ECC71;
 }
 
 h1 {
   font-family: 'Lato', sans-serif;
-  text-align: center;
   font-size: 64px;
 }
 
-h2 {
-  text-align: center;
-}
-
 h5 {
-  text-align: center;
   margin-top: -45px;
-}
-
-body p {
-  text-align: center;
-  color: gray;
-  font-size: 9px;
-  margin-top: 50px;
-  margin-left: 400px;
-  margin-right: 400px;
 }
 
 select {
   width: 300px;
   display: block;
   margin: 0 auto;
+}
+
+p {
+  color: gray;
+  font-size: 10px;
+  padding: 0 400px 0 400px;
+}
+
+@media screen and (max-width: 600px) {
+  p {
+    padding: 10px 10px 0 10px;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 800px) {
+  p {
+    padding: 10px 40px 0 40px;
+  }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1000px) {
+  p {
+    padding: 10px 120px 0 120px;
+  }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1200px) {
+  p {
+    padding: 10px 200px 0 200px;
+  }
 }
 
 button {
@@ -64,4 +79,9 @@ button {
   border-style: none;
   background-color: #2ECC71;
   color: #fff;
+}
+
+button:hover {
+  cursor: hand;
+  cursor: pointer;
 }

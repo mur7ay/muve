@@ -14,6 +14,7 @@ let _userName = document.getElementById('name');
 let _userPhone = document.getElementById('phone');
 let _pickDateAndTime = document.getElementById('dpt');
 let _numOfItems = document.getElementById('items');
+let btn = document.getElementById('submitBtn');
 
 let addy1, addy2, _name, _phone, _pickupTime, _itemCount;
 
@@ -57,6 +58,12 @@ document.getElementById('submitBtn').onclick = function() {
       pickupTime: _pickupTime,
       itemCount: _itemCount
   });
+
+  $('#submitBtn').click(function(){
+    $('#submitBtn').attr("disabled", true);
+  });
+
+  // clearField();
 
 }
 
@@ -105,3 +112,29 @@ $('select[class="form-control"]').on('change',function(){
   var get = $('select option:selected').val();
   $('.text-center h2 span').html(get+" USD");
 });
+
+$('#submitBtn').click(function() {
+  $('#submitBtn').attr("disabled", true);
+});
+
+$('#submitBtn').click(function(){
+  $('#submitBtn').attr("disabled", true);
+});
+
+// function disableBtn() {
+//   $('#submitBtn').click(function() {
+//     $('#submitBtn').attr("disabled", true);
+//   });
+// }
+
+// function clearField() {
+//   if () {
+//     _pickupAddress.value = '';
+//     _dropoffAddress.value = '';
+//   }
+//
+//   _userName.value = '';
+//   _userPhone.value = '';
+//   _pickDateAndTime.value = '';
+//   _numOfItems.value = '';
+// }
