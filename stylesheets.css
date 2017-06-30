@@ -85,3 +85,8 @@ button:hover {
   cursor: hand;
   cursor: pointer;
 }
+
+.fa {
+  color: grey;
+  margin: 50px 15px 0;
+}
