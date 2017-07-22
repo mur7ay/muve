@@ -70,15 +70,92 @@
   <input id="address1" type="text" required="required" size="50" placeholder="Pickup Address">
   <input id="address2" type="text" size="50" placeholder="Dropoff Address">
 
-  <h3>Name & Phone</h3>
-  <hr style="width:50px;" />
-  <input id="name" type="text" size="50" placeholder="Full Name" style="text-transform: capitalize;" />
-  <input id="phone" type="text" size="50" placeholder="Phone" onkeypress="numberPressed(event);" />
-
-  <h3>Pickup Date & Time</h3>
-  <hr style="width:50px;" />
-  <input type="text" class="span2" value="06-01-2017 12:05" id="dpt">
-
+ <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Autocomplete - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    var availableTags = [
+      "Framed Art",
+      "Desk",
+      "Desk (L-Shape)",
+      "Chair",
+      "Sofa",
+      "Couch",
+      "Reclining Sofa",
+      "Reclining Chair",
+      "Bar Stool(s)",
+      "Office Chair",
+      "Chaise Lounge Chair",
+      "Sectional Sofa",
+      "Motorized Chair/Sofa",
+      "Sleeper Sofa",
+      "Bookcase",
+      "Mirror (Small)",
+      "Mirror (Large)",
+      "Rug",
+      "Shelving (Metal)",
+      "Shelving (Plastic)",
+      "Dining Room Table",
+      "Coffee Table",
+      "End Table",
+      "Cabinet",
+      "China Cabinet",
+      "Hutch (2 Piece)",
+      "Hutch (1 Piece)",
+      "Buffett",
+      "Dresser",
+      "Chest",
+      "Armoire",
+      "Chifferobe",
+      "Marble Top Dresser",
+      "Television",
+      "Bed (Frame)",
+      "Mattress (King)",
+      "Mattress (Queen)",
+      "Mattress (Full)",
+      "Mattress (Twin)",
+      "Bunk Bed",
+      "Sewing Machine",
+      "Table",
+      "Trunk",
+      "Sofa Table",
+      "Treadmill",
+      "Elliptical",
+      "Exercise Bike",
+      "Refridgerator",
+      "Upright Freezer",
+      "Oven",
+      "Washer",
+      "Dryer",
+           
+      
+      
+    ];
+    $( "#tags" ).autocomplete({
+      source: availableTags
+    });
+  } );
+  </script>
+</head>
+<body>
+ 
+<div class="ui-widget">
+  <label for="tags">Tags: </label>
+  <input id="tags">
+</div>
+ 
+ 
+</body>
+</html>
+ 
   <h3>Move Details</h3>
   <hr style="width:50px;" />
 
